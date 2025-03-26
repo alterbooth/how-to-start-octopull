@@ -22,7 +22,7 @@ body {
 main {
   flex: 1;
   padding: 0 2em;
-  max-width: 40rem;
+  max-width: 60rem;
   margin: 0 auto;
 }
 
@@ -40,7 +40,6 @@ main > h2 {
 
 .guide {
   width: 100%;
-  max-width: 40rem;
   padding-left: 20px;
   margin: 0;
 }
