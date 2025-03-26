@@ -7,121 +7,146 @@
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-  <main>
-    <h1>セットアップ手順</h1>
-    <p>OctoPullのご利用にあたり、以下のすべての手順を完了しセットアップを行ってください。</p>
-    <aside>
-      <p>
-        ※次の条件をすべて満たしたOrganizationのみバックアップの対象となります。
-        <ul>
-          <li>OctoPullの利用申請が完了したEnterpriseアカウントに存在するOrganizationであること</li>
-          <li>GitHub App「OctoPullApp」のインストールが完了していること</li>
-        </ul>
-        バックアップしたいデータが複数のOrganizationに存在する場合は、それらすべてのOrganizationに「OctoPullApp」をインストールしてください。
-      </p>
-    </aside>
-    <h2>GitHub App「OctoPullApp」のインストール</h2>
-    <ol class="guide">
-      <li>
-        <a href="https://github.com/apps/octopullapp" target="_blank" rel="noopener noreferrer">GitHub Appの「OctoPullApp」のページ</a>
-        にアクセスします。
-      </li>
-      <li>
-        <p>[<b>Install</b>] ボタンをクリックします。</p>
-        <aside>
-          <p>※ご自身が所属するいずれかのOrganizationに「OctoPullApp」をすでにインストール済みの場合、[<b>Install</b>] ボタンの代わりに [<b>Configure</b>] ボタンが表示されます。
-            <br/>
-            2つ目以降のOrganizationにインストールする際はそちらのボタンをクリックしてください。
-          </p>
-        </aside>
+  <div class="container">
+    <nav class="sidebar">
+      <div class="sidebar-header">
+        <a href="https://www.octopull.jp/" class="logo-link">
+          <img src="./images/icons/Octopull_icon.png" alt="OctoPull Logo" class="logo-image">
+        </a>
+      </div>
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="#setup" class="nav-link">セットアップ手順</a>
+          <ul class="nav-sublist">
+            <li class="nav-item">
+              <a href="#github-app" class="nav-link">GitHub App「OctoPullApp」のインストール</a>
+            </li>
+            <li class="nav-item">
+              <a href="#personal-token" class="nav-link">GitHub Personal Access Tokenの登録</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <a href="https://www.octopull.jp/" class="nav-link">OctoPullをはじめる</a>
+      </div>
+    </nav>
+    <main>
+      <h1 id="setup">セットアップ手順</h1>
+      <p>OctoPullのご利用にあたり、以下のすべての手順を完了しセットアップを行ってください。</p>
+      <aside>
+        <p>
+          ※次の条件をすべて満たしたOrganizationのみバックアップの対象となります。
+          <ul>
+            <li>OctoPullの利用申請が完了したEnterpriseアカウントに存在するOrganizationであること</li>
+            <li>GitHub App「OctoPullApp」のインストールが完了していること</li>
+          </ul>
+          バックアップしたいデータが複数のOrganizationに存在する場合は、それらすべてのOrganizationに「OctoPullApp」をインストールしてください。
+        </p>
+      </aside>
+      <h2 id="github-app">GitHub App「OctoPullApp」のインストール</h2>
+      <ol class="guide">
+        <li>
+          <a href="https://github.com/apps/octopullapp" target="_blank" rel="noopener noreferrer">GitHub Appの「OctoPullApp」のページ</a>
+          にアクセスします。
+        </li>
+        <li>
+          <p>[<b>Install</b>] ボタンをクリックします。</p>
+          <aside>
+            <p>※ご自身が所属するいずれかのOrganizationに「OctoPullApp」をすでにインストール済みの場合、[<b>Install</b>] ボタンの代わりに [<b>Configure</b>] ボタンが表示されます。
+              <br/>
+              2つ目以降のOrganizationにインストールする際はそちらのボタンをクリックしてください。
+            </p>
+          </aside>
         <h3>はじめてインストールする場合</h3>
-        <img src="./images/how-to-start-01.webp" alt="GitHub Appの「OctoPullApp」のページ画面" class="screen-shot" />
+          <img src="./images/how-to-start-01.webp" alt="GitHub Appの「OctoPullApp」のページ画面" class="screen-shot" />
         <h3>2つ目以降のOrganizationにインストールする場合</h3>
         <img src="./images/how-to-start-02.webp" alt="GitHub Appの「OctoPullApp」のページ画面" class="screen-shot" />
-      </li>
-      <li>
-        <p>「OctoPullApp」をインストールするOrganizationを選択します。</p>
-        <p>※OctoPullの利用申請が完了したEnterpriseアカウントには存在しないOrganizationに「OctoPullApp」をインストールしてもデータのバックアップはできませんのでご注意ください。</p>
-        <img src="./images/how-to-start-03.webp" alt="Organizationの選択画面" class="screen-shot" />
-      </li>
-      <li>
-        <p>バックアップを作成するリポジトリを選択した後、[<b>Install</b>] をクリックしインストールを開始します。</p>
-        <aside>
-          <p>
-            ※すべてのリポジトリをバックアップしたい場合は [<b>All repositories</b>] を選択してください。
-            <br/>
-            選択したリポジトリのみバックアップしたい場合は [<b>Only select repositories</b>] を選択し、バックアップしたいリポジトリを選択してください。</p>
-          </p>
-        </aside>
-        <img src="./images/how-to-start-04.webp" alt="リポジトリの選択画面" class="screen-shot" />
-      </li>
-      <li>
-        <p>「Okay, OctoPullApp was installed on the @{Organizationアカウント名} account」という青帯のメッセージが画面上部に表示されたらインストールは完了です。</p>
-        <img src="./images/how-to-start-05.webp" alt="インストール完了画面" class="screen-shot" />
-      </li>
-    </ol>
-    <h2>GitHub Personal Access Tokenの登録</h2>
-    <ol class="guide">
-      <li>
-        <p><a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer">GitHubのPersonal Access tokens (classic)のページ</a> にアクセスし、[<b>Generate new token</b>] プルダウンから [<b>Generate new token (classic)</b>] を選択します。</p>
-        <img src="./images/how-to-start-06.webp" alt="GitHubのDeveloper settings画面" class="screen-shot" />
-      </li>
-      <li>
-        <p>画面上部に表示されている次の2つのフィールドを入力します。</p>
-        <ul>
-          <li>
-            <p>[<b>Note</b>] フィールド：トークンを判別できるようなわかりやすい名前を入力します。</p>
-          </li>
-          <li>
-            <p>[<b>Expiration</b>] フィールド：トークンの有効期限を設定します。</p>
-          </li>
-        </ul>
-        <img src="./images/how-to-start-07.webp" alt="GitHubのPersonal access token作成画面上部" class="screen-shot" />
-      </li>
-      <li>
-        <p>同じ画面を下にスクロールし、次の3つのスコープにチェックを入れます。</p>
-        <ul>
-          <li>
-            <p>[<b>read:org</b>] スコープ</p>
+        </li>
+        <li>
+          <p>「OctoPullApp」をインストールするOrganizationを選択します。</p>
+          <p>※OctoPullの利用申請が完了したEnterpriseアカウントには存在しないOrganizationに「OctoPullApp」をインストールしてもデータのバックアップはできませんのでご注意ください。</p>
+          <img src="./images/how-to-start-03.webp" alt="Organizationの選択画面" class="screen-shot" />
+        </li>
+        <li>
+          <p>バックアップを作成するリポジトリを選択した後、[<b>Install</b>] をクリックしインストールを開始します。</p>
+          <aside>
+            <p>
+              ※すべてのリポジトリをバックアップしたい場合は [<b>All repositories</b>] を選択してください。
+              <br/>
+              選択したリポジトリのみバックアップしたい場合は [<b>Only select repositories</b>] を選択し、バックアップしたいリポジトリを選択してください。</p>
+            </p>
+          </aside>
+          <img src="./images/how-to-start-04.webp" alt="リポジトリの選択画面" class="screen-shot" />
+        </li>
+        <li>
+          <p>「Okay, OctoPullApp was installed on the @{Organizationアカウント名} account」という青帯のメッセージが画面上部に表示されたらインストールは完了です。</p>
+          <img src="./images/how-to-start-05.webp" alt="インストール完了画面" class="screen-shot" />
+        </li>
+      </ol>
+      <h2 id="personal-token">GitHub Personal Access Tokenの登録</h2>
+      <ol class="guide">
+        <li>
+          <p><a href="https://github.com/settings/tokens" target="_blank" rel="noopener noreferrer">GitHubのPersonal Access tokens (classic)のページ</a> にアクセスし、[<b>Generate new token</b>] プルダウンから [<b>Generate new token (classic)</b>] を選択します。</p>
+          <img src="./images/how-to-start-06.webp" alt="GitHubのDeveloper settings画面" class="screen-shot" />
+        </li>
+        <li>
+          <p>画面上部に表示されている次の2つのフィールドを入力します。</p>
+          <ul>
+            <li>
+              <p>[<b>Note</b>] フィールド：トークンを判別できるようなわかりやすい名前を入力します。</p>
+            </li>
+            <li>
+              <p>[<b>Expiration</b>] フィールド：トークンの有効期限を設定します。</p>
+            </li>
+          </ul>
+          <img src="./images/how-to-start-07.webp" alt="GitHubのPersonal access token作成画面上部" class="screen-shot" />
+        </li>
+        <li>
+          <p>同じ画面を下にスクロールし、次の3つのスコープにチェックを入れます。</p>
+          <ul>
+            <li>
+              <p>[<b>read:org</b>] スコープ</p>
             <img src="./images/how-to-start-08.webp" alt="GitHubのPersonal access token作成画面のスコープ一覧1" class="screen-shot" />
-          </li>
-          <li>
-            <p>[<b>read:enterprise</b>] スコープ</p>
-          </li>
-          <li>
-            <p>[<b>read:audit_log</b>] スコープ</p>
-            <img src="./images/how-to-start-09.webp" alt="GitHubのPersonal access token作成画面のスコープ一覧2" class="screen-shot" />
-            <aside>
-              <p>※Enterpriseアカウント所有者ではないユーザーは [<b>read:audit_log</b>] にチェックを入れてもEnterpriseアカウントの監査ログは取得できません。</p>
-            </aside>
-          </li>
-        </ul>
-      </li>
-      <li>
-        <p>[<b>Generate token</b>] ボタンをクリックしてトークンを生成します。</p>
-        <img src="./images/how-to-start-10.webp" alt="GitHubのPersonal access token作成画面下部" class="screen-shot" />
-      </li>
-      <li>
-        <p>生成されたトークンをコピーします。</p>
-        <aside>
-          <p>※トークンは1度しか画面に表示されないため、忘れずにコピーしてください。</p>
-        </aside>
-        <img src="./images/how-to-start-11.webp" alt="GitHubのPersonal access token作成画面下部" class="screen-shot" />
-      </li>
-      <li>
-        <p><a href="https://www.octopull.jp" target="_blank" rel="noopener noreferrer">OctoPull</a> にアクセスし、ログインします。</p>
-      </li>
-      <li>
-        <p>左側のメニューから[<b>監査ログバックアップ</b>] を選択します。</p>
-        <p>テキストボックスに先ほどコピーしたGitHub Personal Access Tokenをペーストし、[<b>保存する</b>] ボタンをクリックします。</p>
-        <img src="./images/how-to-start-12.webp" alt="OctoPullのEnterprise監査ログ設定画面" class="screen-shot" />
-      </li>
-    </ol>
-    <p>
-      以上でセットアップは完了です。
-      <br/>
-      セットアップがうまくいかない場合やその他のご質問がある場合は、<a href="https://www.alterbooth.com" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a> からお問い合わせください。
-    </p>
-  </main>
+            </li>
+            <li>
+              <p>[<b>read:enterprise</b>] スコープ</p>
+              </li>
+            <li>
+              <p>[<b>read:audit_log</b>] スコープ</p>
+              <img src="./images/how-to-start-09.webp" alt="GitHubのPersonal access token作成画面のスコープ一覧2" class="screen-shot" />
+              <aside>
+                <p>※Enterpriseアカウント所有者ではないユーザーは [<b>read:audit_log</b>] にチェックを入れてもEnterpriseアカウントの監査ログは取得できません。</p>
+              </aside>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <p>[<b>Generate token</b>] ボタンをクリックしてトークンを生成します。</p>
+          <img src="./images/how-to-start-10.webp" alt="GitHubのPersonal access token作成画面下部" class="screen-shot" />
+        </li>
+        <li>
+          <p>生成されたトークンをコピーします。</p>
+          <aside>
+            <p>※トークンは1度しか画面に表示されないため、忘れずにコピーしてください。</p>
+          </aside>
+          <img src="./images/how-to-start-11.webp" alt="GitHubのPersonal access token作成画面下部" class="screen-shot" />
+        </li>
+        <li>
+          <p><a href="https://www.octopull.jp" target="_blank" rel="noopener noreferrer">OctoPull</a> にアクセスし、ログインします。</p>
+        </li>
+        <li>
+          <p>左側のメニューから[<b>監査ログバックアップ</b>] を選択します。</p>
+          <p>テキストボックスに先ほどコピーしたGitHub Personal Access Tokenをペーストし、[<b>保存する</b>] ボタンをクリックします。</p>
+          <img src="./images/how-to-start-12.webp" alt="OctoPullのEnterprise監査ログ設定画面" class="screen-shot" />
+        </li>
+      </ol>
+      <p>
+        以上でセットアップは完了です。
+        <br/>
+        セットアップがうまくいかない場合やその他のご質問がある場合は、<a href="https://www.alterbooth.com" target="_blank" rel="noopener noreferrer">お問い合わせフォーム</a> からお問い合わせください。
+      </p>
+    </main>
+  </div>
 </body>
 </html>
