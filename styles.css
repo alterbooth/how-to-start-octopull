@@ -33,7 +33,7 @@ main > h1 {
 }
 
 main > h2 {
-  margin-bottom: 0.5rems;
+  margin-bottom: 0.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid var(--color-border-primary);
 }
